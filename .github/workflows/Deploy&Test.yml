@@ -7,6 +7,16 @@ on:
     branches: [ main ]
 
 jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: Run super-linter
+        uses: github/super-linter@v3
+        
   build:
 
     runs-on: ubuntu-latest
